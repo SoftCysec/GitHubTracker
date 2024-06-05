@@ -1,0 +1,7 @@
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerTest/bin/Debug/net8.0/CoverletSourceRootsMapping_GitHubRepoTrackerTest
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerTest/obj/Debug/net8.0/GitHubRepoTrackerTest.csproj.AssemblyReference.cache
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerTest/obj/Debug/net8.0/GitHubRepoTrackerTest.GeneratedMSBuildEditorConfig.editorconfig
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerTest/obj/Debug/net8.0/GitHubRepoTrackerTest.AssemblyInfoInputs.cache
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerTest/obj/Debug/net8.0/GitHubRepoTrackerTest.AssemblyInfo.cs
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerTest/obj/Debug/net8.0/GitHubRepoTrackerTest.csproj.CoreCompileInputs.cache
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerTest/obj/Debug/net8.0/GitHubRepoTrackerTest.sourcelink.json

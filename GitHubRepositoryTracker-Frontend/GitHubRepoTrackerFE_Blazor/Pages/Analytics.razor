@@ -1,0 +1,86 @@
+@page "/analytics"
+@inject IOpenAIAssistantService OpenAIAssistantService
+@inject ILanguageService LanguageService
+@inject IRepoService RepoService
+@inject ITopicService TopicService
+
+<h3>Repository Analytics</h3>
+<div>
+    <input @bind="queryInput" placeholder="Ask a question about your repositories..." @onkeydown="HandleKeyPress" class="input-box" />
+    <button @onclick="SubmitQuery" class="query-button">Submit</button>
+</div>
+<div>
+    @if (!string.IsNullOrEmpty(queryResponse))
+    {
+        <p>@queryResponse</p>
+    }
+</div>
+<div>
+    <BarChart TItem="int" @ref="repoChart" Options="chartOptions"></BarChart>
+    <BarChart TItem="int" @ref="languageChart" Options="chartOptions"></BarChart>
+    <BarChart TItem="int" @ref="topicChart" Options="chartOptions"></BarChart>
+</div>
+
+@code {
+    private string queryInput = string.Empty;
+    private string queryResponse = string.Empty;
+    private BarChart<int>? repoChart;
+    private BarChart<int>? languageChart;
+    private BarChart<int>? topicChart;
+    private readonly BarChartOptions chartOptions = new BarChartOptions { Responsive = true, MaintainAspectRatio = false };
+
+    protected override async Task OnInitializedAsync()
+    {
+        await UpdateCharts();
+    }
+
+    private async Task UpdateCharts()
+    {
+        var languages = await LanguageService.GetLanguagesAsync();
+        var repos = await RepoService.GetReposAsync();
+        var topics = await TopicService.GetTopicsAsync();
+
+        var repoChartData = new BarChartDataset<int>
+        {
+            Label = "Repositories",
+            Data = repos.Select(r => r.StargazersCount).ToList() // Replace 'SomeMetric' with actual property
+        };
+
+        var languageChartData = new BarChartDataset<int>
+        {
+            Label = "Languages",
+            Data = languages.Select(l => l.Popularity).ToList() // Replace 'SomeMetric' with actual property
+        };
+
+        var topicChartData = new BarChartDataset<int>
+        {
+            Label = "Topics",
+            Data = topics.Select(t => t.Popularity).ToList() // Replace 'SomeMetric' with actual property
+        };
+
+        if (repoChart != null) { await repoChart.Clear(); await repoChart.AddDataSet(repoChartData); await repoChart.Update(); }
+        if (languageChart != null) { await languageChart.Clear(); await languageChart.AddDataSet(languageChartData); await languageChart.Update(); }
+        if (topicChart != null) { await topicChart.Clear(); await topicChart.AddDataSet(topicChartData); await topicChart.Update(); }
+    }
+
+    private async Task SubmitQuery()
+    {
+        if (!string.IsNullOrWhiteSpace(queryInput))
+        {
+            queryResponse = "Processing...";
+            var response = await OpenAIAssistantService.GetResponseAsync(queryInput);
+            queryResponse = response;
+
+            // TODO: Process response and update charts as needed
+            await UpdateCharts();
+        }
+    }
+
+    private void HandleKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            _ = SubmitQuery(); // Using assignment to silence the warning
+        }
+    }
+}

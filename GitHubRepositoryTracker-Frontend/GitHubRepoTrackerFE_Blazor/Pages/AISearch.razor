@@ -1,0 +1,46 @@
+@page "/aisearch"
+@inject IOpenAIAssistantService OpenAIAssistantService
+
+<h3 class="title">AI Search</h3>
+<div class="search-container">
+    <input @bind="userInput" placeholder="Ask a question about your repositories..." @onkeydown="HandleKeyPress" class="input-box" />
+    <button @onclick="SendMessage" class="search-button">Search</button>
+</div>
+<div class="response-container">
+    @if (!string.IsNullOrEmpty(responseMessage))
+    {
+    <p>@responseMessage</p>
+    }
+</div>
+
+<style>
+    .title { text-align: center; margin-bottom: 1rem; }
+    .search-container { display: flex; justify-content: center; align-items: center; margin-bottom: 1rem; }
+    .input-box { width: 70%; padding: 0.5rem; margin-right: 0.5rem; border: 1px solid #ccc; border-radius: 5px; }
+    .search-button { padding: 0.5rem 1rem; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer; }
+    .search-button:hover { background-color: #0056b3; }
+    .response-container { text-align: center; }
+</style>
+
+@code {
+private string userInput;
+private string responseMessage;
+
+private async Task SendMessage()
+{
+if (!string.IsNullOrWhiteSpace(userInput))
+{
+responseMessage = "Processing...";
+var response = await OpenAIAssistantService.GetResponseAsync(userInput);
+responseMessage = response;
+}
+}
+
+private void HandleKeyPress(KeyboardEventArgs e)
+{
+if (e.Key == "Enter")
+{
+SendMessage();
+}
+}
+}

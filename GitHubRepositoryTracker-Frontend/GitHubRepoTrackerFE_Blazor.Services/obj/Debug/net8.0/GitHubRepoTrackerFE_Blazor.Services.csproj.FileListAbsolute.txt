@@ -1,0 +1,12 @@
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/bin/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Services.deps.json
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/bin/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Services.dll
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/bin/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Services.pdb
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Services.GeneratedMSBuildEditorConfig.editorconfig
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Services.AssemblyInfoInputs.cache
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Services.AssemblyInfo.cs
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Services.csproj.CoreCompileInputs.cache
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Services.sourcelink.json
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Services.dll
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/obj/Debug/net8.0/refint/GitHubRepoTrackerFE_Blazor.Services.dll
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Services.pdb
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/obj/Debug/net8.0/ref/GitHubRepoTrackerFE_Blazor.Services.dll

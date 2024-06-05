@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubRepoTrackerFE_Blazor", "GitHubRepoTrackerFE_Blazor\GitHubRepoTrackerFE_Blazor.csproj", "{8EAB7A49-B789-4CCE-BDB6-C5149CEA8E2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubRepoTrackerTest", "GitHubRepoTrackerTest\GitHubRepoTrackerTest.csproj", "{ACD0E89F-B05A-42D2-B20B-9ED811B3078B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EAB7A49-B789-4CCE-BDB6-C5149CEA8E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EAB7A49-B789-4CCE-BDB6-C5149CEA8E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EAB7A49-B789-4CCE-BDB6-C5149CEA8E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EAB7A49-B789-4CCE-BDB6-C5149CEA8E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD0E89F-B05A-42D2-B20B-9ED811B3078B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD0E89F-B05A-42D2-B20B-9ED811B3078B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD0E89F-B05A-42D2-B20B-9ED811B3078B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD0E89F-B05A-42D2-B20B-9ED811B3078B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6D67EE7-96F4-4D7E-953D-F12D4B804017}
+	EndGlobalSection
+EndGlobal

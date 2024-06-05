@@ -1,0 +1,12 @@
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/bin/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Models.deps.json
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/bin/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Models.dll
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/bin/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Models.pdb
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Models.GeneratedMSBuildEditorConfig.editorconfig
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Models.AssemblyInfoInputs.cache
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Models.AssemblyInfo.cs
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Models.csproj.CoreCompileInputs.cache
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Models.sourcelink.json
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Models.dll
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/obj/Debug/net8.0/refint/GitHubRepoTrackerFE_Blazor.Models.dll
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Models.pdb
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/obj/Debug/net8.0/ref/GitHubRepoTrackerFE_Blazor.Models.dll

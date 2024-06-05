@@ -1,0 +1,282 @@
+﻿@using GitHubRepoTrackerFE_Blazor.Interfaces
+@using GitHubRepoTrackerFE_Blazor.Models
+@using System.Linq
+@using Microsoft.JSInterop;
+@page "/"
+@inject IRepoService reposervice
+@inject ILanguageService languageservice
+@inject ITopicService topicservice
+@inject HttpClient Http
+
+<PageTitle>Home</PageTitle>
+<Header />
+
+@if (RepositoryListModel.repositories is not null && RepositoryListModel.topics is not null && RepositoryListModel.languages is not null)
+{
+    <div class=" row filters mb-2 float-right sticky-top">
+        <div class="mr-3">
+            <button class="btn btn-secondary" @onclick='ResetFilters'>Reset filters</button>
+        </div>
+        
+        <div class="mr-3">
+            <label>Filter by Language:</label>
+            <select id="select_language" @onchange="FilterByLanguage" value="@selectedLanguage">
+                <option value="" selected disabled >Choose Language</option>
+               
+                @foreach (var language in RepositoryListModel.languages)
+                {
+
+                    <option value="@language.LanguageName">@language.LanguageName</option>
+                }
+            </select>
+        </div>
+
+        <div>
+            <label>Filter by Topics:</label>
+
+            <select id="select_topic" @onchange="FilterByTopic" value="@selectedTopic">
+                <option value="" selected disabled>Choose Topic</option>
+
+                @foreach (var topic in RepositoryListModel.topics)
+                {
+                    <option value="@topic.TopicName">@topic.TopicName</option>
+                }
+            </select>
+        </div>
+    </div>
+    <div>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>RepoName</th>
+                    <th>Description</th>
+                    <th>Language</th>
+                    <th>Topics</th>
+                    <th @onclick='() => SortTable("updatedAt")'>Last updated@((MarkupString)DateRow)</th>
+                    <th @onclick='() => SortTable("stargazersCount")'>Stars@((MarkupString)StarsRow)</th>
+                    <th @onclick='() => SortTable("forksCount")'>Forks@((MarkupString)ForksRow)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int index = 1;
+                    foreach (var repo in RepositoryListModel.repositories)
+                    {
+                        <tr>
+                            <td>@index</td>
+                            <td> <a target="_blank" href=@repo.Url>@repo.RepositoryName </a></td>
+                            <td>@repo.Description</td>
+                            <td>@repo.Language.LanguageName</td>
+
+                            <td>
+                                <ul>
+
+                                    @foreach (var topic in repo.RepositoryTopics)
+                                    {
+                                        <li>@topic.TopicName</li>
+                                    }
+                                </ul>
+
+                            </td>
+                            <td>@repo.UpdatedAt</td>
+                            <td>@repo.StargazersCount</td>
+                            <td>@repo.ForksCount</td>
+                        </tr>
+                        index++;
+                    }
+                }
+            </tbody>
+            @if(totalPages > 1)
+            {
+                <tfoot>
+                    <Blazorise.Pagination TotalPages="@(totalPages != 0 ? totalPages : 1)"
+                                PageIndex="@pageIndex"
+                                Radius="3"
+                                OnSelectedPage="@SelectedPage">
+                    </Blazorise.Pagination>
+                </tfoot>
+            }
+
+            
+
+
+        </table>
+    </div>
+
+
+}
+    
+else
+{
+        <p>Loading data...</p>
+}
+
+
+@code
+{
+    public RepositoryListModel RepositoryListModel = new RepositoryListModel();
+    string selectedLanguage = "";
+    string selectedTopic = "";
+    private string sortColumn = "updatedAt";
+    private bool isDescending = true;
+    string DateRow, StarsRow, ForksRow;
+    string upArrow, downArrow;
+
+    private int pageIndex = 1;
+    private int itemsPerPage = 10;
+    private int totalPages = 1;
+    private int skipCount = 0;
+
+
+}
+
+@functions {
+    protected override async Task OnInitializedAsync()
+    {
+
+        upArrow = "<img src=\"/Images/up.png\" />";
+        downArrow = "<img src=\"/Images/down.png\" />";
+
+
+        RepositoryListModel.allrepositories = await reposervice.GetReposAsync();
+        RepositoryListModel.languages = await languageservice.GetLanguagesAsync();
+        RepositoryListModel.topics = await topicservice.GetTopicsAsync();
+
+        RepositoryListModel.allrepositories = RepositoryListModel.allrepositories.OrderByDescending(r => r.GetType().GetProperty(sortColumn).GetValue(r, null)).ToList();
+        RepositoryListModel.topics = RepositoryListModel.topics.OrderBy(r => r.GetType().GetProperty("topicName").GetValue(r, null)).ToList();
+        RepositoryListModel.languages = RepositoryListModel.languages.OrderBy(r => r.GetType().GetProperty("languageName").GetValue(r, null)).ToList();
+        DateRow = downArrow;
+
+
+        if (RepositoryListModel.allrepositories != null)
+        {
+            // Initialize the number of "totalPages"
+            totalPages = (int)(RepositoryListModel.allrepositories.Count() / itemsPerPage);
+
+            // Initialize the "repositories" which will be displayed when the page loaded first time.
+
+
+            RepositoryListModel.repositories = RepositoryListModel.allrepositories.Skip(skipCount).Take(itemsPerPage).OrderByDescending(r => r.GetType().GetProperty(sortColumn).GetValue(r, null)).ToList();
+        }
+
+    }
+
+
+    void FilterByLanguage(ChangeEventArgs e)
+    {
+        selectedLanguage = e.Value.ToString();
+        FetchData();
+    }
+
+    void FilterByTopic(ChangeEventArgs e)
+    {
+        selectedTopic = e.Value.ToString();
+        FetchData();
+    }
+
+
+    async void FetchData()
+    {
+        RepositoryListModel.allrepositories = await reposervice.GetReposAsync();
+        if(selectedLanguage != null || selectedTopic != null)
+        {
+            RepositoryListModel.allrepositories = RepositoryListModel.allrepositories.Where(r =>
+            (string.IsNullOrEmpty(selectedLanguage) || r.Language.LanguageName == selectedLanguage) &&
+            (string.IsNullOrEmpty(selectedTopic) || r.RepositoryTopics.Any(t => t.TopicName == selectedTopic)
+            )).ToList();
+        }
+        RepositoryListModel.allrepositories = RepositoryListModel.allrepositories.OrderByDescending(r => r.GetType().GetProperty(sortColumn).GetValue(r, null)).ToList();
+
+        if (RepositoryListModel.allrepositories != null)
+        {
+            // Initialize the number of "totalPages"
+            totalPages = (int)(RepositoryListModel.allrepositories.Count() / itemsPerPage);
+            pageIndex = 1;
+            skipCount = 0;
+
+            // Initialize the "repositories" which will be displayed when the page loaded first time.
+
+
+            RepositoryListModel.repositories = RepositoryListModel.allrepositories.Skip(skipCount).Take(itemsPerPage).OrderByDescending(r => r.GetType().GetProperty(sortColumn).GetValue(r, null)).ToList();
+        }
+
+       
+
+
+
+        StateHasChanged();
+
+    }
+
+    async void ResetFilters()
+    {
+        selectedLanguage = "";
+        selectedTopic = "";
+        FetchData();
+
+    }
+
+    private void SelectedPage(int selectedPageIndex)
+    {
+        
+        if (RepositoryListModel.allrepositories != null)
+        {
+            pageIndex = selectedPageIndex;
+            skipCount = itemsPerPage * (pageIndex - 1);
+            RepositoryListModel.repositories = RepositoryListModel.allrepositories.Skip(skipCount).Take(itemsPerPage).ToList();
+        }
+    }
+
+    
+
+    private void SortTable(string columnName)
+    {
+
+
+        if (columnName != sortColumn) // if the column is different from the previous one, sort descending by default
+        {
+            RepositoryListModel.allrepositories = RepositoryListModel.allrepositories.OrderByDescending(r => r.GetType().GetProperty(columnName).GetValue(r, null)).ToList();
+            isDescending = true;
+            sortColumn = columnName;
+        }
+        else // if the column is the same as the previous one, toggle the sort direction
+        {
+            if (isDescending) // if previously ascending, sort descending
+            {
+                RepositoryListModel.allrepositories = RepositoryListModel.allrepositories.OrderBy(r => r.GetType().GetProperty(columnName).GetValue(r, null)).ToList();
+            }
+            else // if previously descending, sort ascending
+            {
+                RepositoryListModel.allrepositories = RepositoryListModel.allrepositories.OrderByDescending(r => r.GetType().GetProperty(columnName).GetValue(r, null)).ToList();
+            }
+            isDescending = !isDescending; // update the sort direction
+        }
+
+        RepositoryListModel.repositories = RepositoryListModel.allrepositories.Skip(skipCount).Take(itemsPerPage).ToList();
+
+        StarsRow = DateRow = ForksRow = "";
+        if (sortColumn == "updatedAt" && isDescending)
+            DateRow = downArrow;
+        else if (sortColumn == "updatedAt" && !isDescending)
+            DateRow = upArrow;
+
+        if (sortColumn == "stargazersCount" && isDescending)
+            StarsRow = downArrow;
+        else if (sortColumn == "stargazersCount" && !isDescending)
+            StarsRow = upArrow;
+
+        if (sortColumn == "forksCount" && isDescending)
+            ForksRow = downArrow;
+        else if (sortColumn == "forksCount" && !isDescending)
+            ForksRow = upArrow;
+
+            
+        
+    }
+
+
+}
+
+

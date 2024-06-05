@@ -1,0 +1,92 @@
+﻿@using GitHubRepoTrackerFE_Blazor.Models
+
+<div class="p-xl-2">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            @foreach (var pageItem in pageItems)
+            {
+                <li @onclick="@(() => SelectCurrentPage(pageItem))"
+                    style="cursor:pointer"
+                    class="page-item
+                @(pageItem.Active ? "active" : null)
+                @(pageItem.Enabled ? null : "disabled")">
+                    <span class="page-link" href="#">@pageItem.Text</span>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>
+
+@code {
+    private List<PagingInfo> pageItems;
+
+    [Parameter]
+    public int PageIndex { get; set; }
+    [Parameter]
+    public int TotalPages { get; set; }
+    [Parameter]
+    public int Radius { get; set; }
+    [Parameter]
+    public EventCallback<int> OnSelectedPage { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        CreatePages();
+    }
+
+    private void CreatePages()
+    {
+        pageItems = new List<PagingInfo>();
+
+        // Create the previous page.
+        var hasFirstPage = PageIndex > 2;
+        pageItems.Add(new PagingInfo(1, hasFirstPage, "First"));
+
+        // Create the previous page.
+        var hasPreviosPage = PageIndex > 1;
+        var previousPageIndex = PageIndex - 1;
+
+        pageItems.Add(new PagingInfo(previousPageIndex, hasPreviosPage, "Prev"));
+
+        // Create pages and add them to the pageItems list.
+        if (Radius >= TotalPages)
+            Radius = TotalPages - 1;
+
+        for (int i = 1; i <= TotalPages; i++)
+        {
+            if (i >= PageIndex - Radius && i 
+    < PageIndex + Radius)
+            {
+                pageItems.Add(new PagingInfo(i, true, i.ToString())
+                    {
+                        Active = PageIndex == i
+                    });
+            }
+        }
+
+        // Create next the page.
+        var hasNextPage = PageIndex < TotalPages;
+        var nextPageIndex = PageIndex + 1;
+        pageItems.Add(new PagingInfo(nextPageIndex, hasNextPage, "Next"));
+
+        // Create last the page.
+        var hasLastPage = PageIndex < TotalPages-1;
+        pageItems.Add(new PagingInfo(TotalPages, hasLastPage, "Last"));
+    }
+
+    private async Task SelectCurrentPage(PagingInfo pageItem)
+    {
+        if (PageIndex == pageItem.PageIndex)
+        {
+            return;
+        }
+
+        if (!pageItem.Enabled)
+        {
+            return;
+        }
+
+        PageIndex = pageItem.PageIndex;
+        await OnSelectedPage.InvokeAsync(pageItem.PageIndex);
+    }
+}

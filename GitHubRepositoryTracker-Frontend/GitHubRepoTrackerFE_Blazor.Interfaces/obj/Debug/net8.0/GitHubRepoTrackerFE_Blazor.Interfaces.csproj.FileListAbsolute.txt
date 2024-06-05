@@ -1,0 +1,12 @@
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/bin/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Interfaces.deps.json
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/bin/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Interfaces.dll
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/bin/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Interfaces.pdb
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Interfaces.AssemblyInfoInputs.cache
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Interfaces.AssemblyInfo.cs
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Interfaces.csproj.CoreCompileInputs.cache
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Interfaces.sourcelink.json
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Interfaces.dll
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/obj/Debug/net8.0/refint/GitHubRepoTrackerFE_Blazor.Interfaces.dll
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/obj/Debug/net8.0/GitHubRepoTrackerFE_Blazor.Interfaces.pdb
+/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/obj/Debug/net8.0/ref/GitHubRepoTrackerFE_Blazor.Interfaces.dll

@@ -1,0 +1,375 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerTest/GitHubRepoTrackerTest.csproj": {}
+  },
+  "projects": {
+    "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/GitHubRepoTrackerFE_Blazor.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/GitHubRepoTrackerFE_Blazor.Interfaces.csproj",
+        "projectName": "GitHubRepoTrackerFE_Blazor.Interfaces",
+        "projectPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/GitHubRepoTrackerFE_Blazor.Interfaces.csproj",
+        "packagesPath": "/home/okwared/.nuget/packages/",
+        "outputPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/okwared/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/GitHubRepoTrackerFE_Blazor.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/GitHubRepoTrackerFE_Blazor.Models.csproj",
+        "projectName": "GitHubRepoTrackerFE_Blazor.Models",
+        "projectPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/GitHubRepoTrackerFE_Blazor.Models.csproj",
+        "packagesPath": "/home/okwared/.nuget/packages/",
+        "outputPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/okwared/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/GitHubRepoTrackerFE_Blazor.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/GitHubRepoTrackerFE_Blazor.Services.csproj",
+        "projectName": "GitHubRepoTrackerFE_Blazor.Services",
+        "projectPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/GitHubRepoTrackerFE_Blazor.Services.csproj",
+        "packagesPath": "/home/okwared/.nuget/packages/",
+        "outputPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/okwared/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor/GitHubRepoTrackerFE_Blazor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor/GitHubRepoTrackerFE_Blazor.csproj",
+        "projectName": "GitHubRepoTrackerFE_Blazor",
+        "projectPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor/GitHubRepoTrackerFE_Blazor.csproj",
+        "packagesPath": "/home/okwared/.nuget/packages/",
+        "outputPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/okwared/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/GitHubRepoTrackerFE_Blazor.Interfaces.csproj": {
+                "projectPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Interfaces/GitHubRepoTrackerFE_Blazor.Interfaces.csproj"
+              },
+              "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/GitHubRepoTrackerFE_Blazor.Models.csproj": {
+                "projectPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Models/GitHubRepoTrackerFE_Blazor.Models.csproj"
+              },
+              "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/GitHubRepoTrackerFE_Blazor.Services.csproj": {
+                "projectPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor.Services/GitHubRepoTrackerFE_Blazor.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Blazorise": {
+              "target": "Package",
+              "version": "[1.5.3, )"
+            },
+            "Blazorise.Bootstrap": {
+              "target": "Package",
+              "version": "[1.5.3, )"
+            },
+            "Blazorise.Charts": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "Blazorise.Icons.FontAwesome": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.5, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerTest/GitHubRepoTrackerTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerTest/GitHubRepoTrackerTest.csproj",
+        "projectName": "GitHubRepoTrackerTest",
+        "projectPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerTest/GitHubRepoTrackerTest.csproj",
+        "packagesPath": "/home/okwared/.nuget/packages/",
+        "outputPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerTest/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/okwared/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor/GitHubRepoTrackerFE_Blazor.csproj": {
+                "projectPath": "/home/okwared/OpenSource/GitRepoNet/GitHubRepositoryTracker-Frontend/GitHubRepoTrackerFE_Blazor/GitHubRepoTrackerFE_Blazor.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.6.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.70, )"
+            },
+            "bunit": {
+              "target": "Package",
+              "version": "[1.26.64, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
